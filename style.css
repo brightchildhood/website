@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* Banner */
+
+.banner{
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.banner h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.banner p{
+    font-size:18px;
+}
+
+.admission{
+    margin-top:15px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* Sections */
+
+section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+/* Map Button */
+
+.map-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#4facfe;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.map-btn:hover{
+    background:#0077ff;
+}
+
+/* Gallery Slider */
+.slider{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.slides{
+    display:flex;
+    width:max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.slides img{
+    width:600px;
+    height:400px;
+    object-fit:cover;
+}
+
+/* SUPER SMOOTH infinite scroll */
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* Footer */
+
+footer{
+    background:#333;
+    color:white;
+    padding:20px;
+}
