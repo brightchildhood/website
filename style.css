@@ -2,101 +2,182 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background:#f4f7fb;
+    background:#fffaf5;
 }
 
-/* Banner */
+
+/* ================= HEADER ================= */
 
 .banner{
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    padding:75px 20px;
+}
+
+.banner-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.banner-text{
+    max-width:650px;
 }
 
 .banner h1{
-    font-size:42px;
-    margin-bottom:10px;
+    font-size:48px;
+    color:#333;
+    margin-bottom:12px;
 }
 
-.banner p{
-    font-size:18px;
+.tagline{
+    font-size:20px;
+    color:#444;
 }
 
 .admission{
-    margin-top:15px;
-    font-weight:bold;
-    font-size:20px;
+    margin-top:22px;
+    font-size:24px;
+    font-weight:700;
+    color:#ff4d6d;
 }
 
-/* Sections */
+/* LOGO */
+
+.school-logo{
+    width:150px;
+    background:white;
+    padding:8px;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* ================= SECTIONS ================= */
 
 section{
-    padding:50px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
 h2{
-    margin-bottom:20px;
+    font-size:34px;
+    margin-bottom:25px;
     color:#333;
 }
 
-/* Map Button */
+.about{
+    background:#fff;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.7;
+    color:#555;
+}
+
+
+/* ================= MAP BUTTON ================= */
 
 .map-btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#4facfe;
+    margin-top:25px;
+    padding:15px 32px;
+    background:#ff7a18;
     color:white;
     text-decoration:none;
-    border-radius:25px;
-    transition:0.3s;
+    border-radius:35px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .map-btn:hover{
-    background:#0077ff;
+    background:#ff5200;
+    transform:translateY(-4px);
 }
 
-/* Gallery Slider */
-.slider{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
-    border-radius:10px;
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#fff6f0;
 }
 
-.slides{
+.swipe-gallery{
     display:flex;
-    width:max-content;
-    animation: scroll 40s linear infinite;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px;
+    scroll-snap-type:x mandatory;
 }
 
-.slides img{
-    width:600px;
-    height:400px;
+.swipe-gallery::-webkit-scrollbar{
+    display:none;
+}
+
+.swipe-gallery img{
+    min-width:320px;
+    height:420px;
     object-fit:cover;
+    border-radius:20px;
+    scroll-snap-align:center;
+    flex-shrink:0;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    transition:.4s;
 }
 
-/* SUPER SMOOTH infinite scroll */
-
-@keyframes scroll{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
+.swipe-gallery img:hover{
+    transform:scale(1.06);
 }
 
-/* Footer */
+
+/* ================= FOOTER ================= */
 
 footer{
     background:#333;
     color:white;
-    padding:20px;
+    padding:28px;
+    text-align:center;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .banner-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .school-logo{
+        width:110px;
+        margin-bottom:20px;
+    }
+
+    .banner h1{
+        font-size:32px;
+    }
+
+    .tagline{
+        font-size:16px;
+    }
+
+    .admission{
+        font-size:18px;
+    }
+
+    .swipe-gallery img{
+        min-width:260px;
+        height:330px;
+    }
 }
